@@ -7,9 +7,9 @@ public class Account {
         this.balance = coins;
     }
 
-    Void updateCoin(int change){
+    void updateCoin(int change){
         this.balance = this.balance + change; 
-        if (this.balance + a < 0){
+        if (this.balance + change < 0){
             this.balance = 0;
         }
     }
