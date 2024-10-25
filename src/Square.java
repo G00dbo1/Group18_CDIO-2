@@ -1,25 +1,25 @@
 package src;
 
 public class Square {
-    int id;
-    String description;
-    int change;
+    private int id;
+    private String description;
+    private int change;
 
-    Square(int id, String description, int change) {
+    public Square(int id, String description, int change) {
         this.id = id;
         this.description = description;
         this.change = change;
     }
 
-    int getId() {
+    public int getId() {
         return this.id;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return this.description;
     }
 
-    int getChange() {
+    public int getChange() {
         return this.change;
     }
 
