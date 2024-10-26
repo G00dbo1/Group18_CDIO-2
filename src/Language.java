@@ -26,6 +26,7 @@ public class Language {
         // Insert description values for the diffent cases in the correct langauage.
         String desc = "";
         switch (_id) {
+            case 1 -> desc += "";
             case 2 -> desc += "";
             case 3 -> desc += "";
             case 4 -> desc += "";

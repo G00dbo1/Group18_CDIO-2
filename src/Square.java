@@ -4,11 +4,13 @@ public class Square {
     private int id;
     private String description;
     private int change;
+    private int[] squareChange = new int[] {250, -100, 100, -20, 180, 0, -70, 60, -80, -50, 650};
+    
 
-    public Square(int id, String description, int change) {
+    public Square(int id, String description) {
         this.id = id;
         this.description = description;
-        this.change = change;
+        this.change = squareChange[this.id];
     }
 
     public int getId() {
