@@ -5,6 +5,9 @@ public class Account {
     
     public Account(int coins){
         this.balance = coins;
+        if(this.balance < 0){
+            this.balance = 0;
+        }
     }
 
     public int getBalance() {
@@ -14,9 +17,6 @@ public class Account {
     public void updateCoin(int change){
         this.balance = this.balance + change; 
         if (this.balance + change < 0){
-            this.balance = 0;
-        }
-        if(this.balance < 0){
             this.balance = 0;
         }
     }
