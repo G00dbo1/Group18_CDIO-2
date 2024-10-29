@@ -16,5 +16,8 @@ public class Account {
         if (this.balance + change < 0){
             this.balance = 0;
         }
+        if(this.balance < 0){
+            this.balance = 0;
+        }
     }
 }
