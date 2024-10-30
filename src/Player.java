@@ -4,7 +4,6 @@ public class Player {
     private int position = 1;
     private Account account;
 
-
     public Player() {
         this.account = new Account(1000);
     }
@@ -16,8 +15,7 @@ public class Player {
 
 
     public void SetPosition(int change) {
-        this.position = (this.position + change) % 12;
-            
+        this.position = (this.position + change) % 12; 
     }
 
 
