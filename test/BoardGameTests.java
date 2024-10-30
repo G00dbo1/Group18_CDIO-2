@@ -21,5 +21,12 @@ public class BoardGameTests {
         assertEquals(expected, account.getBalance());
     }
 
-    
+    @Test 
+    public void posistionTest1() {
+        Player player = new Player();
+    }
+
+
+
+
 }
