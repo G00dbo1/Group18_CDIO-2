@@ -31,15 +31,12 @@ public class Language {
             case 1 -> text += "Player 1' turn:";
             case 2 -> text += "Player 2' turn:";
             case 3 -> text += "Amount coins: ";
-            case 4 -> text += "Game has ended\nPlayer 1 has won\n";
-            case 5 -> text += "Game has ended\nPlayer 2 has won\n";
+            case 4 -> text += "The Game has ended\nPlayer 1 was the first to get ahold of 3000 or more coins\nPlayer 1 won\n";
+            case 5 -> text += "The Game has ended\nPlayer 2 was the first to get ahold of 3000 or more coins\nPlayer 2 won\n";
         }
 
         return text;
     }
-
-
-    
 
 
     public String DK(int _id) {
