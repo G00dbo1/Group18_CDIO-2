@@ -6,7 +6,7 @@ public class Player {
 
 
     public Player() {
-        this.account = new Account(0);
+        this.account = new Account(1000);
     }
 
 
