@@ -16,7 +16,9 @@ public class Player {
 
 
     public void SetPosition(int change) {
-        if (this.position + change % 12 != 0) {
+        if ((this.position + change) % 12 == 0) {
+            this.position = 12;
+        } else {
             this.position = (this.position + change) % 12;
         }
     }
