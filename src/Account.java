@@ -10,9 +10,11 @@ public class Account {
         }
     }
 
+    
     public int getBalance() {
         return this.balance;
     }
+
 
     public void updateCoin(int change){
         this.balance = this.balance + change; 

@@ -13,14 +13,17 @@ public class Square {
         this.change = squareChange[this.id];
     }
 
+
     public int getId() {
         return this.id;
     }
+
 
     public String getDescription() {
         return this.description;
     }
 
+    
     public int getChange() {
         return this.change;
     }
