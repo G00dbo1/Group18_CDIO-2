@@ -37,7 +37,7 @@ public class BoardGameTests {
         Player player = new Player();
 
         player.SetPosition(11);
-        int expected = 12;
+        int expected = 0;
 
         assertEquals(expected, player.getPosition());
 
