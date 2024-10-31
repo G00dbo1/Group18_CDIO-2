@@ -34,8 +34,8 @@ public class Language {
             case 4 -> text += "The Game has ended\nPlayer 1 was the first to get ahold of 3000 or more coins\nPlayer 1 won\n";
             case 5 -> text += "The Game has ended\nPlayer 2 was the first to get ahold of 3000 or more coins\nPlayer 2 won\n";
             case 6 -> text += "The Player has rolled: ";
-            case 7 -> text += "The Player was on sqaure: ";
-            case 8 -> text += "The Player is now on sqaure: ";
+            case 7 -> text += "The Player was on square: ";
+            case 8 -> text += "The Player is now on square: ";
         }
 
         return text;
