@@ -2,7 +2,7 @@ package src;
 import java.util.Scanner;
 
 public class Game {
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
     private Player player1;
     private Player player2;
     private Die die1;
@@ -10,7 +10,7 @@ public class Game {
     private Square[] squares = new Square[12];
     private Language lan = new Language();
     
-    public Game(int die1_faces, int die2_faces) {
+    public Game(int die1_faces, int die2_faces, String lan, Scanner scanner) {
         this.player1 = new Player();
         this.player2 = new Player();
 
@@ -20,11 +20,22 @@ public class Game {
         for (int i = 0; i < 12; i++) {
             this.squares[i] = new Square(i, this.lan.ENG(i));
         }
+
+        this.scanner = scanner;
     }
 
 
     public static void main(String[] args) {
-        Game gameConsoller = new Game(6, 6);
+        Scanner initScanner = new Scanner(System.in);
+        initScanner.useLocale(java.util.Locale.ENGLISH);
+        System.out.println("Please enter the amount of faces you would like your first die to have: ");
+        int die1_faces = Integer.parseInt(initScanner.nextLine());
+        System.out.println("Please enter the amount of faces you would like your second die to have: ");
+        int die2_faces = Integer.parseInt(initScanner.nextLine());
+        System.out.println("Please enter your preffered language (format: ENG): ");
+        String lan = initScanner.nextLine();
+
+        Game gameConsoller = new Game(die1_faces, die2_faces, lan, initScanner);
         gameConsoller.playGame();
     }
 
@@ -38,6 +49,7 @@ public class Game {
             if (hasWon(player1)) {
                 // Displays who won
                 System.out.println(this.lan.gameFlow_ENG(4));
+                scanner.close();
                 break;
             }
 
@@ -48,6 +60,7 @@ public class Game {
             if (hasWon(player2)) {
                 // Displays who won
                 System.out.println(this.lan.gameFlow_ENG(5));
+                scanner.close();
                 break;
             }
         }
