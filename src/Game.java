@@ -10,7 +10,7 @@ public class Game {
     private Square[] squares = new Square[12];
     private Language lan = new Language();
     
-    public Game(int die1_faces, int die2_faces, String language, Scanner scanner) {
+    public Game(int die1_faces, int die2_faces, Scanner scanner) {
         this.player1 = new Player();
         this.player2 = new Player();
 
@@ -37,15 +37,13 @@ public class Game {
 
         System.out.println("Please enter your prefered language (format: ENG): ");
         String lan = initScanner.nextLine();
-        
+
         if (lan.equals("ENG")) {
-            Game gameConsoller = new Game(die1_faces, die2_faces, lan, initScanner);
+            Game gameConsoller = new Game(die1_faces, die2_faces, initScanner);
             gameConsoller.playGame();
         } else {
             System.out.println("Not a valid langauge"); 
         }
-
-        
     }
 
 
