@@ -1,10 +1,11 @@
 package src;
 
 public class Player {
-    private int position = 1;
+    private int position;
     private Account account;
 
     public Player() {
+        this.position = 0;
         this.account = new Account(1000);
     }
 
