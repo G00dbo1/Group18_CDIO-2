@@ -1,6 +1,8 @@
 package test;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
 import org.junit.*;
 import src.*;
 
@@ -160,6 +162,18 @@ public class BoardGameTests {
         amountEquals = amountEquals.divide(divisor).setScale(3, RoundingMode.CEILING);
 
         assertEquals(theoreticalAmount, amountEquals.doubleValue(), 0);
+    }
+
+    @Test
+    public void dieTest1() {
+        Die die1 = new Die(6);
+        Die die2 = new Die(6);
+        
+        die1.roll();
+        die2.roll();
+
+        assertFalse(die1.getFaceValue() + die2.getFaceValue() == 1);
+        
     }
 
     @Test
