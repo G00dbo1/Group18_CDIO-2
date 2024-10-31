@@ -179,7 +179,7 @@ public class BoardGameTests {
     @Test
     public void squareTest1() {
         Language lan = new Language();
-        Square square = new Square(5, lan.ENG(5));
+        Square square = new Square(5, lan.squares_ENG(5));
 
         int expected = 5;
 
@@ -189,7 +189,7 @@ public class BoardGameTests {
     @Test
     public void squareTest2() {
         Language lan = new Language();
-        Square square = new Square(6, lan.ENG(6));
+        Square square = new Square(6, lan.squares_ENG(6));
 
         String expected = "You found a Monastery, they're broke you get nothing";
 
@@ -199,7 +199,7 @@ public class BoardGameTests {
     @Test
     public void squareTest3() {
         Language lan = new Language();
-        Square square = new Square(7, lan.ENG(7));
+        Square square = new Square(7, lan.squares_ENG(7));
 
         int expected = -70;
 
